@@ -1,3 +1,16 @@
-body {
-    background-color: red;
-}
+// GLOBAL STYLING--------------
+@import './global/normalize';
+@import './global/global';
+// UTILS----------------
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/queries';
+@import './utils/mixins';
+@import './utils/helpers';
+@import './utils/animations';
+// COMPONENTS-----------------
+@import './components/header';
+@import './components/links';
+@import './components/images';
+@import './components/socials';
+@import './components/header_overlay';

@@ -1,0 +1,18 @@
+.links__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+        --fontSize: 1.875rem;
+        @include responsiveQuery(xx-large) {
+            --fontSize: 2.5rem;
+        }
+        font-size: var(--fontSize);
+    }
+    a {
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

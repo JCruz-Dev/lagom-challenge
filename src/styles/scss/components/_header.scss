@@ -1,0 +1,71 @@
+.header__content {
+    transition: all 0.3s ease-in-out;
+    @include responsiveQuery(x-large) {
+        order: 2;
+    }
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2.25rem;
+    margin-bottom: rem(40px);
+    @include responsiveQuery(xx-large) {
+        margin-bottom: 0;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+    }
+}
+.logo__container {
+    .gg__logo {
+        @include responsiveQuery(xx-large) {
+            display: none;
+        }
+    }
+    .lagom__logo {
+        display: none;
+        @include responsiveQuery(xx-large) {
+            display: block;
+        }
+    }
+}
+.header__title__container {
+    height: auto;
+    display: grid;
+    place-items: center;
+    margin-bottom: rem(40px);
+    @include responsiveQuery(xx-large) {
+        margin-top: rem(150px);
+    }
+}
+.header__content__title {
+    --fontSize: 2.5rem;
+    line-height: 42px;
+    text-align: center;
+    @include responsiveQuery(xx-large) {
+        --fontSize: 60px;
+        text-align: left;
+        line-height: rem(63px);
+        width: 420px;
+        font-weight: 800;
+    }
+    font-size: var(--fontSize);
+}
+.header__content__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.icon__open {
+    cursor: pointer;
+}

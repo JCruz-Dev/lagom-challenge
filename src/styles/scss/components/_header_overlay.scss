@@ -1,0 +1,58 @@
+.header__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $main-color;
+    width: 100%;
+    height: 100vh;
+    z-index: $z-index-overlay;
+    transition: all 0.35s ease;
+    &.close {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    &.open {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    @include responsiveQuery(xx-large) {
+        left: initial;
+        width: calc(100% - 49vw);
+    }
+    &__menu {
+        --marginY: 2.1525rem;
+        --marginX: 1.49rem;
+        @include responsiveQuery(xx-large) {
+            --marginX: 2.7775rem;
+        }
+        text-align: right;
+        padding: var(--marginY) var(--marginX);
+    }
+    &__list {
+        cursor: pointer;
+        color: white;
+        list-style: none;
+        &__item {
+            --fontSize: 1.875rem;
+            @include responsiveQuery(xx-large) {
+                --fontSize: 2.5rem;
+            }
+            font-size: var(--fontSize);
+            margin-bottom: 2.5rem;
+            &:not(:first-child) {
+                color: $third-color;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.icon__close {
+    cursor: pointer;
+}
+.icon__return {
+    display: inline-block;
+    margin-right: 1rem;
+}

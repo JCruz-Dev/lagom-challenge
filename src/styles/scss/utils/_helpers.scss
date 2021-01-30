@@ -1,0 +1,49 @@
+// CLASS HELPERS
+.space-content {
+    --paddingY: 2.25rem;
+    --paddingX: 1.25rem;
+    @include responsiveQuery(xx-large) {
+        --paddingX: 2.5rem;
+    }
+    padding: var(--paddingY) var(--paddingX) 0 var(--paddingY);
+}
+.space-social-content-Y {
+    --paddingY: 2.5rem;
+    @include responsiveQuery(xx-large) {
+        --paddingY: 4.0625rem;
+    }
+    padding-top: var(--paddingY);
+    padding-bottom: var(--paddingY);
+}
+.space-social-content-X {
+    --paddingX: 1.25rem;
+    @include responsiveQuery(xx-large) {
+        --paddingX: 2.5rem;
+    }
+    padding-right: var(--paddingX);
+    padding-left: var(--paddingX);
+}
+.spacer {
+    height: 4px;
+    background-color: $main-color;
+}
+.grid-content {
+    --rows: 1fr;
+    @include responsiveQuery(xx-large) {
+        --rows: 1fr 1fr;
+    }
+    display: grid;
+    grid-template-columns: var(--rows);
+}
+.title__color__gray {
+    color: inherit;
+    @include responsiveQuery(xx-large) {
+        color: $second-color;
+    }
+}
+.arrow__color {
+    color: $main-color;
+}
+.arrow__color__gray {
+    color: $second-color;
+}

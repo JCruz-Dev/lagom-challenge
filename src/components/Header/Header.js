@@ -3,10 +3,18 @@ import { ReactComponent as MenuIcon } from '../../assets/Menu.svg';
 import { ReactComponent as LogoG } from '../../assets/ggg.svg';
 import { ReactComponent as LogoLagom } from '../../assets/Lagom.svg';
 import { HeaderOverlay } from './HeaderOverlay';
+import useKeyPress from '../../hook/KeyPress';
 export const Header = () => {
     const [menuState, setMenuState] = React.useState(false)
+    const close = useKeyPress("Escape");
+    React.useEffect(() => {
+        if(close && menuState){
+            setMenuState(false)
+        }
+    }, [close, menuState])
     return (
-        <>
+        <> 
+            <div onClick={() => setMenuState(!menuState)} style={{position:`fixed`,display: menuState ? 'block' : 'none', left: 0, top: 0,width:'50%', height:'100%', zIndex: 1}}/>
             <HeaderOverlay headerWasClicked={menuState} setMenu={setMenuState} />
             <header className="header__container">
                 <div className="logo__container">

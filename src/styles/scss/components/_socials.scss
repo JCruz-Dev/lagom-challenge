@@ -1,0 +1,8 @@
+.socials__content {
+    @include responsiveQuery(xx-large) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: rem(40px);
+    }
+}

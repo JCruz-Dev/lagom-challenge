@@ -429,7 +429,7 @@ img {
 }
 
 .animation-fade-in {
-  animation: fadeIn ease 1s;
+  animation: fadeIn ease 1.3s;
 }
 
 @keyframes fadeIn {
@@ -534,6 +534,7 @@ img {
   display: block;
   width: 100%;
   object-fit: cover;
+  height: auto;
 }
 
 .icon__open {

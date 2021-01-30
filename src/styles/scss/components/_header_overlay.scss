@@ -56,3 +56,11 @@
     display: inline-block;
     margin-right: 1rem;
 }
+.header__overlay__close {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}

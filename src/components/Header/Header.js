@@ -14,7 +14,8 @@ export const Header = () => {
     }, [close, menuState])
     return (
         <> 
-            <div onClick={() => setMenuState(!menuState)} style={{position:`fixed`,display: menuState ? 'block' : 'none', left: 0, top: 0,width:'50%', height:'100%', zIndex: 1}}/>
+            <div onClick={() => setMenuState(!menuState)} className="header__overlay__close" 
+            style={{position:`fixed`,display: menuState ? 'block' : 'none'}}/>
             <HeaderOverlay headerWasClicked={menuState} setMenu={setMenuState} />
             <header className="header__container">
                 <div className="logo__container">

@@ -1,8 +1,9 @@
 .header__content {
     transition: all 0.3s ease-in-out;
-    @include responsiveQuery(x-large) {
+    @include responsiveQuery(medium) {
         order: 2;
     }
+    border-bottom: 1px solid #3333;
 }
 .header__container {
     display: flex;
@@ -44,7 +45,10 @@
     display: grid;
     place-items: center;
     margin-bottom: rem(40px);
-    @include responsiveQuery(xx-large) {
+    @include responsiveQuery(large) {
+        margin-top: rem(100px);
+    }
+    @include responsiveQuery(x-large) {
         margin-top: rem(150px);
     }
 }
@@ -52,10 +56,17 @@
     --fontSize: 2.5rem;
     line-height: 42px;
     text-align: center;
+    @include responsiveQuery(medium) {
+        text-align: left;
+        width: 300px;
+    }
+    @include responsiveQuery(large) {
+        width: 380px;
+        --fontSize: 55px;
+        line-height: rem(63px);
+    }
     @include responsiveQuery(xx-large) {
         --fontSize: 60px;
-        text-align: left;
-        line-height: rem(63px);
         width: 420px;
         font-weight: 800;
     }

@@ -29,6 +29,11 @@
 }
 .grid-content {
     --rows: 1fr;
+    &.grid-header {
+        @include responsiveQuery(medium) {
+            --rows: 1fr 1fr;
+        }
+    }
     @include responsiveQuery(xx-large) {
         --rows: 1fr 1fr;
     }

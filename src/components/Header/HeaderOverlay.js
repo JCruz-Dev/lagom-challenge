@@ -28,6 +28,6 @@ export const HeaderOverlay = ({ headerWasClicked, setMenu }) => {
   );
 };
 HeaderOverlay.propTypes = {
-  headerWasClicked: PropTypes.string,
+  headerWasClicked: PropTypes.bool,
   setMenu: PropTypes.func,
 };

@@ -7,7 +7,7 @@ import { SocialContent } from "./components/Social/SocialContent";
 function App() {
   return (
     <>
-      <div className="grid-content animation-fade-in">
+      <div className="grid-content grid-header animation-fade-in">
         <HeaderContent />
         <img
           src={phoneImage}
@@ -16,7 +16,7 @@ function App() {
         />
       </div>
       <main>
-        <div className="grid-content">
+        <div className="grid-content animation-fade-in">
           <SocialContent />
           <div className="images__content">
             <img

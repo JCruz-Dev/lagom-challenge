@@ -5,7 +5,7 @@
     @include responsiveQuery(xx-large) {
         --paddingX: 2.5rem;
     }
-    padding: var(--paddingY) var(--paddingX) 0 var(--paddingY);
+    padding: var(--paddingY) var(--paddingX) 0 var(--paddingX);
 }
 .space-social-content-Y {
     --paddingY: 2.5rem;
@@ -34,7 +34,7 @@
             --rows: 1fr 1fr;
         }
     }
-    @include responsiveQuery(xx-large) {
+    @include responsiveQuery(large) {
         --rows: 1fr 1fr;
     }
     display: grid;

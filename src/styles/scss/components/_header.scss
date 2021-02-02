@@ -29,13 +29,16 @@
 }
 .logo__container {
     .gg__logo {
+        @include responsiveQuery(medium) {
+            display: none;
+        }
         @include responsiveQuery(xx-large) {
             display: none;
         }
     }
     .lagom__logo {
         display: none;
-        @include responsiveQuery(xx-large) {
+        @include responsiveQuery(medium) {
             display: block;
         }
     }
